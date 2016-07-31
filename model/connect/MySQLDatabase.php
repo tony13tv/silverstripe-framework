@@ -42,7 +42,7 @@ class MySQLDatabase extends SS_Database {
 		$this->connector->connect($parameters);
 
 		// This is important!
-		$this->setSQLMode('ANSI');
+		$this->setSQLMode('ANSI_QUOTES');
 
 		if (isset($parameters['timezone'])) {
 			$this->selectTimezone($parameters['timezone']);
